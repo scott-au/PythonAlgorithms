@@ -8,10 +8,12 @@ Created on Fri Oct  2 00:13:21 2020
 Leet Code Accepted Code
 """
 
+
 class Node:
     def __init__(self, val=None):
-        self.val = val;
+        self.val = val
         self.next = None
+
 
 class Solution:
     def __init__(self):
@@ -22,8 +24,6 @@ class Solution:
     #     nn.next = self.head
     #     self.head = nn
 
-
-
     # def Print(self):
     #     printVal = self.head
     #     while printVal is not None:
@@ -32,17 +32,17 @@ class Solution:
 
     def reverseKGroup(self, head, k):
         cnt = 0
-        c =0
+        c = 0
         curr = head
         next = None
         prev = None
         temp = curr
-        while temp is not None and c<k :
+        while temp is not None and c < k:
             temp = temp.next
             c = c + 1
         print(c)
         if c == k:
-            while (curr is not None and cnt < k):
+            while curr is not None and cnt < k:
                 next = curr.next
                 curr.next = prev
                 prev = curr
@@ -55,10 +55,9 @@ class Solution:
         else:
             return curr
 
+
 #     def ReverseNodeK(self, k):
 #         self.head = self.reverseKGroup(self.head, k)
-
-
 
 
 # LL = Solution()

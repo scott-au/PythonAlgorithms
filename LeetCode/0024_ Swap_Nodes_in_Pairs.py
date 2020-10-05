@@ -1,4 +1,4 @@
-'''
+"""
 Problem:-
 
 Given a linked list, swap every two adjacent nodes and return its head.
@@ -7,7 +7,7 @@ You may not modify the values in the list's nodes, only nodes itself may be chan
 Example:
 - Given 1->2->3->4, you should return the list as 2->1->4->3.
 
-'''
+"""
 
 # Definition for singly-linked list.
 # class ListNode:
@@ -23,5 +23,3 @@ class Solution:
             pre.next, b.next, a.next = b, a, b.next
             pre = a
         return self.next
-
-

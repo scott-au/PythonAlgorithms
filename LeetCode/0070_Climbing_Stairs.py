@@ -1,4 +1,4 @@
-'''
+"""
 Problem:
 You are climbing a stair case. It takes n steps to reach to the top.
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
@@ -13,12 +13,15 @@ The total number of ways is thus
 sum (n-k) choose k where k=0..n/2
 The solution of this sum equals the (n+1)th fibonacci number as seen here: https://www.wolframalpha.com/input/?i=sum+%28n-k%29+choose+k+for+k%3D0..n%2F2
 That way the problem becomes rather easy.
-'''
+"""
+
+
 class Solution:
     def climbStairs(self, n: int) -> int:
         return self.fib(n + 1)
 
     fibStore = {}
+
     def fib(self, n: int) -> int:
         if n in self.fibStore:
             return self.fibStore[n]

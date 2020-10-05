@@ -7,6 +7,6 @@ class Solution:
             remaining.remove(num)
             for perm in self.permutations(remaining):
                 yield [num] + list(perm)
-    
+
     def permute(self, nums: List[int]) -> List[List[int]]:
         return list(self.permutations(nums))

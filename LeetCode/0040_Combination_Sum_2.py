@@ -1,4 +1,4 @@
-'''
+"""
 Problem :-
 
 Given a collection of candidate numbers (candidates) and a target number (target), 
@@ -17,7 +17,9 @@ A solution set is:
   [1, 1, 6]
 ]
 
-'''
+"""
+
+
 class Solution:
     def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
         candidates.sort()
@@ -29,5 +31,3 @@ class Solution:
                 table[i + j] |= {elt + (i,) for elt in table[j]}
             table[i].add((i,))
         return map(list, table[target])
-        
-

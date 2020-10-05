@@ -1,7 +1,8 @@
 from typing import List, Dict
 
+
 class Solution:
-    def _score(self, position: List[int], state: Dict[int,bool]) -> List[int]:
+    def _score(self, position: List[int], state: Dict[int, bool]) -> List[int]:
         score = 0
         scores = list()
         for pos in position:

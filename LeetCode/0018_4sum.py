@@ -8,14 +8,16 @@ class Solution:
                 return twoSum(nums, target)
             for i in range(len(nums)):
                 if i == 0 or nums[i - 1] != nums[i]:
-                    for _, set in enumerate(kSum(nums[i + 1:], target - nums[i], k - 1)):
+                    for _, set in enumerate(
+                        kSum(nums[i + 1 :], target - nums[i], k - 1)
+                    ):
                         res.append([nums[i]] + set)
             return res
 
         def twoSum(nums, target):
             res = []
             lo, hi = 0, len(nums) - 1
-            while (lo < hi):
+            while lo < hi:
                 sum = nums[lo] + nums[hi]
                 if sum < target or (lo > 0 and nums[lo] == nums[lo - 1]):
                     lo += 1

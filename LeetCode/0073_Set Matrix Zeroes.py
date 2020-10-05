@@ -1,4 +1,5 @@
-# SOLUTIONS 1 
+# SOLUTIONS 1
+
 
 class Solution(object):
     def setZeroes(self, matrix):
@@ -24,7 +25,8 @@ class Solution(object):
                     matrix[i][j] = 0
 
 
-#SOLUTIONS 2
+# SOLUTIONS 2
+
 
 class Solution(object):
     def setZeroes(self, matrix):
@@ -44,7 +46,7 @@ class Solution(object):
                 is_col = True
             for j in range(1, C):
                 # If an element is zero, we set the first element of the corresponding row and column to 0
-                if matrix[i][j]  == 0:
+                if matrix[i][j] == 0:
                     matrix[0][j] = 0
                     matrix[i][0] = 0
 
@@ -59,7 +61,7 @@ class Solution(object):
             for j in range(C):
                 matrix[0][j] = 0
 
-        # See if the first column needs to be set to zero as well        
+        # See if the first column needs to be set to zero as well
         if is_col:
             for i in range(R):
                 matrix[i][0] = 0

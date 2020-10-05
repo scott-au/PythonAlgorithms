@@ -1,8 +1,8 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
-        openbrackets = ('(', '[', '{')
-        matches = ('()', '[]', '{}')
+        openbrackets = ("(", "[", "{")
+        matches = ("()", "[]", "{}")
 
         for c in s:
             if c in openbrackets:

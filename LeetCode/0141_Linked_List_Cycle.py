@@ -4,10 +4,11 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
-    '''
+    """
     Solution using Floyd's cycle-finding algorithm (tortoise and hare)
-    '''
+    """
 
     def hasCycle(self, head: ListNode) -> bool:
         if not head or not head.next:
@@ -26,9 +27,9 @@ class Solution:
 
 
 class SolutionO1:
-    '''
+    """
     Solution to follow up. Disregards contents of each ListNode.
-    '''
+    """
 
     def hasCycle(self, head: ListNode) -> bool:
         while head:

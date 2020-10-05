@@ -9,10 +9,10 @@ class Solution:
         empty_cells = deque()
         for i in range(9):
             for j in range(9):
-                if board[i][j] != '.':
+                if board[i][j] != ".":
                     rows[i].add(board[i][j])
                     cols[j].add(board[i][j])
-                    subgrids[(i//3, j//3)].add(board[i][j])
+                    subgrids[(i // 3, j // 3)].add(board[i][j])
                 else:
                     empty_cells.append((i, j))
 
@@ -21,9 +21,13 @@ class Solution:
                 return True
 
             row, col = empty_cells[0]
-            subgrid = (row//3, col//3)
-            for digit in {"1", '2', '3', '4', '5', '6', '7', '8', '9'}:
-                if digit not in rows[row] and digit not in cols[col] and digit not in subgrids[subgrid]:
+            subgrid = (row // 3, col // 3)
+            for digit in {"1", "2", "3", "4", "5", "6", "7", "8", "9"}:
+                if (
+                    digit not in rows[row]
+                    and digit not in cols[col]
+                    and digit not in subgrids[subgrid]
+                ):
                     board[row][col] = digit
                     rows[row].add(digit)
                     cols[col].add(digit)
@@ -32,11 +36,12 @@ class Solution:
                     if dfs():
                         return True
 
-                    board[row][col] = '.'
+                    board[row][col] = "."
                     rows[row].remove(digit)
                     cols[col].remove(digit)
                     subgrids[subgrid].remove(digit)
                     empty_cells.appendleft((row, col))
             return False
+
         dfs()
         return board

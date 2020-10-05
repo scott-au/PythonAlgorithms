@@ -10,8 +10,8 @@ class Solution:
             if not merged or merged[-1][1] < interval[0]:
                 merged.append(interval)
             else:
-            # otherwise, there is overlap, so we merge the current and previous
-            # intervals.
+                # otherwise, there is overlap, so we merge the current and previous
+                # intervals.
                 merged[-1][1] = max(merged[-1][1], interval[1])
 
         return merged

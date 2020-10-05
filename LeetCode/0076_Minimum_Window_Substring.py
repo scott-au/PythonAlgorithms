@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
         char_frequency = defaultdict(lambda: 0)
@@ -18,8 +19,8 @@ class Solution:
                     chars_matched += 1
 
             while start <= end and chars_matched == len(char_frequency):
-                if res == "" or end-start+1 < len(res):
-                    res = s[start:end+1]
+                if res == "" or end - start + 1 < len(res):
+                    res = s[start : end + 1]
 
                 left_char = s[start]
                 if left_char in t:

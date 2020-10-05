@@ -4,6 +4,7 @@
 #         self.val = val
 #         self.next = next
 
+
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         current_point = front = ListNode()
@@ -23,7 +24,7 @@ class Solution:
             else:
                 current_point.next = ListNode(l2.val)
                 l2 = l2.next
-                    
+
             current_point = current_point.next
-        
+
         return front.next

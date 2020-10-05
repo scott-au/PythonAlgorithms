@@ -2,15 +2,16 @@
 # Problem link : https://leetcode.com/problems/sort-colors/
 # Contributor  : Shreeraksha R Aithal
 
+
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
         """
-        Do not return anything, modify nums in-place instead.        
+        Do not return anything, modify nums in-place instead.
         """
-        
+
         i = k = 0
         n = len(nums)
-        j = n-1
+        j = n - 1
         while k < n and i < j:
             if nums[k] == 0:
                 if k > i:
@@ -26,4 +27,3 @@ class Solution:
                     k += 1
             else:
                 k += 1
-

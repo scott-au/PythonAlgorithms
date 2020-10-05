@@ -1,10 +1,11 @@
-#using backtracking approach
+# using backtracking approach
+
 
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        def backtrack(first = 0, curr = []):
+        def backtrack(first=0, curr=[]):
             # if the combination is done
-            if len(curr) == k:  
+            if len(curr) == k:
                 output.append(curr[:])
             for i in range(first, n):
                 # add nums[i] into the current combination
@@ -13,7 +14,7 @@ class Solution:
                 backtrack(i + 1, curr)
                 # backtrack
                 curr.pop()
-        
+
         output = []
         n = len(nums)
         for k in range(n + 1):

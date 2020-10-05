@@ -7,6 +7,6 @@ class Solution:
             if n in seen:
                 return True
             if i >= k:
-                seen.remove(nums[i-k])
+                seen.remove(nums[i - k])
             seen.add(n)
         return False

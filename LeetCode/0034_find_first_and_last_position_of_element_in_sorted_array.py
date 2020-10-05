@@ -1,14 +1,13 @@
-  
-  # Approach: Binary Search
-  # Time Complexity: O(n) linear
-  # Space Complexity: O(1) constant
+# Approach: Binary Search
+# Time Complexity: O(n) linear
+# Space Complexity: O(1) constant
+
 
 class Solution(object):
-
     def searchRange(self, nums, target):
         l = self.search(nums, target, True)
         if l == -1:
-            return [-1,-1]
+            return [-1, -1]
 
         r = self.search(nums, target, False)
         return [l, r]

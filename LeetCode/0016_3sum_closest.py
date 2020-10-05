@@ -1,6 +1,7 @@
 # Import necessary dependencies
 import sys
 
+
 class Solution:
     def threeSumClosest(self, nums, target):
         # Sort the array
